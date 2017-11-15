@@ -1,3 +1,4 @@
-Here you can find the base/template to create a new module for BO3.
+http://icons.iconarchive.com/icons/icons8/windows-8/128/Animals-Dog-Track-icon.png "Dog Image"
 
-Feel free to ask us anything about it.
+# Mod Sasha
+[## for BO3-BOzon](https://github.com/One-Shift/BO3-BOzon)

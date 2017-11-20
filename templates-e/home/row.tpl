@@ -13,7 +13,7 @@
 			Ping
 		</a>
 		<span class="sm-block15"></span>
-		<a href="{c2r-bo-path/{c2r-lg}/sasha/edit/{c2r-id}" class="btn btn-edit" role="button">
+		<a href="{c2r-bo-path/{c2r-lg}/{c2r-module-folder}/edit/{c2r-id}" class="btn btn-edit" role="button">
 			<i class="fa fa-pencil" aria-hidden="true"></i>
 			<span class="sm-block15 xs-block15"></span>
 			Edit

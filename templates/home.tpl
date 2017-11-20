@@ -14,7 +14,7 @@
 					<th>System</th>
 					<th>Date</th>
 					<th class="sm-taright">
-						<a href="{c2r-bo-path/{c2r-lg}/sasha/edit/" class="btn btn-add" role="button">
+						<a href="{c2r-bo-path/{c2r-lg}/{c2r-module-folder}/edit/" class="btn btn-add" role="button">
 							<i class="fa fa-plus" aria-hidden="true"></i>
 							<span class="sm-block15 xs-block15"></span>
 							Add

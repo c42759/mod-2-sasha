@@ -2,7 +2,7 @@
 
 $cfg->mdl = new stdClass();
 $cfg->mdl->name = "Sasha";
-$cfg->mdl->folder = "mod-sasha";
+$cfg->mdl->folder = "mod-2-sasha";
 $cfg->mdl->path = "{$cfg->system->path_bo}/modules/{$cfg->mdl->folder}/";
 $cfg->mdl->version = "0.0.1";
 $cfg->mdl->developer = "Carlos Santos";

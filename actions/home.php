@@ -1,13 +1,12 @@
 <?php
 
-$query = sprintf(
-	"SELECT * FROM %s_sasha WHERE true",
-	$cfg->db->prefix
-);
+$add = bo3::mdl_load('templates-e/add/modal.tpl');
+$edit = bo3::mdl_load('templates-e/edit/modal.tpl');
 
-$source = $db->query($query);
+$entries = new sasha();
+$entries = $entries->returnAllEntries();
 
-while ($data = $source->fetch_object()) {
+foreach ($entries as $i => $entry) {
 	if (!isset($list)) {
 		$list = "";
 		$row_tpl = bo3::mdl_load('templates-e/home/row.tpl');
@@ -15,14 +14,14 @@ while ($data = $source->fetch_object()) {
 
 	$list .= bo3::c2r(
 		[
-			'id' => $data->id,
-			'project' => $data->project,
-			'name' => $data->name,
-			'ip' => $data->ip,
-			'ip2' => $data->ip2,
-			'system' => $data->system,
-			'date' => date("Y-m-d", strtotime($data->date)),
-			'date-update' => $data->date_update,
+			'id' => $entry->id,
+			'project' => $entry->project,
+			'name' => $entry->name,
+			'ip' => $entry->ip,
+			'ip2' => $entry->ip2,
+			'system' => $entry->system,
+			'date' => date("Y-m-d", strtotime($entry->date)),
+			'date-update' => $entry->date_update,
 		],
 		$row_tpl
 	);
@@ -30,7 +29,9 @@ while ($data = $source->fetch_object()) {
 
 $mdl = bo3::c2r(
 	[
-		'list' => isset($list) ? $list : ''
+		'list' => isset($list) ? $list : '',
+		'add-modal' => $add,
+		'edit-modal' => $edit
 	],
 	bo3::mdl_load("templates/home.tpl")
 );

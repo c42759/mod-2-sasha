@@ -14,11 +14,11 @@
 					<th>System</th>
 					<th>Date</th>
 					<th class="sm-taright">
-						<a href="{c2r-bo-path/{c2r-lg}/{c2r-module-folder}/edit/" class="btn btn-add" role="button">
+						<button type="button" class="btn btn-add" data-toggle="modal" data-target="#add-modal">
 							<i class="fa fa-plus" aria-hidden="true"></i>
 							<span class="sm-block15 xs-block15"></span>
 							Add
-						</a>
+						</button>
 					</th>
 				</tr>
 			</thead>
@@ -28,8 +28,15 @@
 		</table>
 	</div>
 </div>
+<div id="modal">
+{c2r-add-modal}
+{c2r-edit-modal}
+</div>
 <script src="{c2r-module-path}/site-assets/js/ping.js" charset="utf-8"></script>
+<script src="{c2r-module-path}/site-assets/js/script.js" charset="utf-8"></script>
 <script type="text/javascript">
+path_mdl = '{c2r-path-bo}/{c2r-lg}/2-sasha';
+
 	$('body').on(
 		'click',
 		'#ip',
